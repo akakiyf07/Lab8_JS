@@ -1,0 +1,169 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+}
+
+.nav-icons {
+    display: flex;
+}
+
+.nav-icons a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.line {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+}
+
+.nav-icons.show {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px;
+    z-index: 1;
+}
+
+.nav-icons.show a {
+    margin: 10px 0;
+    color: #fff;
+    text-decoration: none;
+}
+
+.carousel {
+    position: relative;
+    width: 800px;
+    height: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    font-weight: bold;
+    padding: 16px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.next {
+    right: 0;
+}
+
+.indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.indicators span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #bbb;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.indicators span.active {
+    background-color: #717171;
+}
+
+.large-images, .medium-images {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.large-images img, .medium-images img {
+    margin: 0 10px;
+}
+
+.large-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.large-images img {
+    margin-bottom: 10px;
+}
+
+.medium-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.medium-images img {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 767px) {
+    .nav-icons {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .carousel {
+        width: 100%;
+        height: 200px;
+    }
+
+    .large-images {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .medium-images {
+        display: none;
+    }
+}
